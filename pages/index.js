@@ -1,15 +1,16 @@
 import { Context } from "../context"
 
-import React, { useContext } from "react"
 import axios from "axios"
+import React, { useContext, useState } from "react"
 import { useRouter } from "next/router"
 
 
 export default function Auth() {
 	const router = useRouter()
-	const { username, setUsername, secret, setSecret } = useContext(Context)
 
-
+	const [ username, setUsername ] = useState()
+	const [ secret, setSecret ] = useState()
+	
 	function onSubmit(e) {
 		e.preventDefault()
 		
@@ -23,41 +24,38 @@ export default function Auth() {
 			)
 			.then( r => {
 				router.push("/chats")
+
+				localStorage.setItem("username", username)
+				localStorage.setItem("secret", secret)
 			})
 	}
 
 
 	return (
-    	<div className="background">
-    		<div className="auth-container">
-        		<form className="auth-form" onSubmit={ e => onSubmit(e) }>
+		<form className="auth-form" onSubmit={ e => onSubmit(e) }>
+          	<div className="auth-title">
+				RKSI Chat
+			</div>
 
-          		<div className="auth-title">
-					NextJS Chat
-				</div>
+			<div className="form-cont">
+				<input
+					type="username"
+					placeholder="Имя пользователя"
+					className="text-input"
+					onChange={ e => setUsername(e.target.value) }
+				/>
 
-          		<div className="input-container">
-            		<input
-              			placeholder="Email"
-              			className="text-input"
-              			onChange={ e => setUsername(e.target.value) }
-            		/>
-          		</div>
+				<input
+					type="password"
+					placeholder="Пароль"
+					className="text-input"
+					onChange={ e => setSecret(e.target.value) }
+				/>
 
-        		<div className="input-container">
-            		<input
-              			type="password"
-              			placeholder="Password"
-              			className="text-input"
-              			onChange={ e => setSecret(e.target.value) }
-            		/>
-	        	</div>
-
-        		<button type="submit" className="submit-button">
-            		Login / Sign Up
-          		</button>
-        	</form>
-      	</div>
-    </div>
-  )
+				<button type="submit" className="submit-button">
+					Войти
+				</button>
+			</div>
+    	</form>
+	)
 }

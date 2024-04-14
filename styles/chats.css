@@ -143,12 +143,10 @@
   position: relative !important;
   top: 4px !important;
   border-width: 0px !important;
-  background-color: #4a5162 !important;
-  color: white !important;
+  background-color: white !important;
+  color: black !important;
 }
-#msg-textarea::placeholder {
-  color: hsla(0, 0%, 100%, 0.568) !important;
-}
+
 
 
 

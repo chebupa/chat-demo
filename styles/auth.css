@@ -1,25 +1,8 @@
-.background {
-  padding: 100px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: calc(100vw - 200px);
-  height: calc(100vh - 200px);
-  background: linear-gradient(150deg, #d9dbe2, #808aac 100%, #282d39 0);
+input, button {
+	margin: 0;
+	padding: 0;
 }
-
-.auth-container {
-  width: 420px;
-  height: 292px;
-  position: relative;
-  top: calc(50vh - 144px - 100px);
-  left: calc(50vw - 240px - 100px);
-  background-color: #4a5162;
-  border-radius: 24px;
-  box-shadow: 0 2px 15px rgb(0 0 0 / 68%);
-}
-
-.auth-form {
+/* .auth-form {
   padding-top: 33px;
   width: 60%;
   margin-left: 20%;
@@ -28,8 +11,8 @@
 .auth-title {
   padding-bottom: 20px;
   width: 100%;
+  font-weight: bold;
   text-align: center;
-  color: white;
   font-size: 26px;
 }
 
@@ -61,4 +44,48 @@
 
 .submit-button::hover {
   background-color: #938ffe;
+} */
+
+
+.auth-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+
+	width: 100vw;
+	height: 100vh;
+}
+.auth-title {
+	font-weight: bold;
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+.form-cont {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+
+	width: 80%;
+}
+.text-input, .submit-button {
+	/* padding: 0.5rem 2rem; */
+	min-width: 100%;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+}
+
+.text-input {
+	border: 1px solid black;
+}
+.submit-button {
+	background-color: rgb(0, 76, 255);
+	border: none;
+	color: white;
+	font-weight: 600;
 }
