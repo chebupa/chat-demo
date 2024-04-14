@@ -6,6 +6,7 @@ import { useRouter } from "next/router"
 
 
 export default function Auth() {
+	
 	const router = useRouter()
 
 	const [ username, setUsername ] = useState()
@@ -33,6 +34,8 @@ export default function Auth() {
 
 	return (
 		<form className="auth-form" onSubmit={ e => onSubmit(e) }>
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+			
           	<div className="auth-title">
 				RKSI Chat
 			</div>

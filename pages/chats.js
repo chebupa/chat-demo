@@ -27,12 +27,16 @@ export default function Home() {
 	if (!showChat) return <></>
 	
 	return (
-        <ChatEngine
-			height="100vh"
-        	projectID="a5987e81-5871-45a8-bc92-77f001bdad43"
-        	userName={ localStorage.getItem("username") }
-        	userSecret={ localStorage.getItem("secret") }
-        	renderNewMessageForm={ () => <MessageFormSocial /> }
-        />
+		<>
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+			<ChatEngine
+				height="100vh"
+				projectID="a5987e81-5871-45a8-bc92-77f001bdad43"
+				userName={ localStorage.getItem("username") }
+				userSecret={ localStorage.getItem("secret") }
+				renderNewMessageForm={ () => <MessageFormSocial /> }
+        	/>
+		</>
 	)
 }
