@@ -1,9 +1,13 @@
-.shadow {
+/* .shadow {
   box-shadow: 0 2px 15px rgb(0 0 0 / 68%);
-}
+} */
+
+
+
+
 
 /* Chat List */
-.ce-wrapper {
+/* .ce-wrapper {
   background-color: #4a5162 !important;
 }
 
@@ -39,11 +43,17 @@
 
 .ce-chat-unread-dot {
   background-color: white !important;
-}
+} */
+
+
+
+
+
+
 
 /* Chat Feed */
 
-.ce-chat-title-container {
+/* .ce-chat-title-container {
   background-color: #4a5162 !important;
   border-radius: 0px !important;
 }
@@ -124,11 +134,29 @@
 .ce-their-message-bubble {
   background-color: #535a6d !important;
   color: rgba(255, 255, 255, 0.705) !important;
+} */
+
+
+
+#msg-textarea {
+  width: calc(100% - 140px) !important;
+  position: relative !important;
+  top: 4px !important;
+  border-width: 0px !important;
+  background-color: #4a5162 !important;
+  color: white !important;
 }
+#msg-textarea::placeholder {
+  color: hsla(0, 0%, 100%, 0.568) !important;
+}
+
+
+
+
 
 /* Chat Settings */
 
-.ce-settings {
+/* .ce-settings {
   background-color: #4a5162 !important;
   border-radius: 0px !important;
 }
@@ -161,4 +189,4 @@
 .ce-autocomplete-close {
   background-color: white !important;
   border-radius: 0px !important;
-}
+} */
