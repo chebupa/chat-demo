@@ -32,7 +32,7 @@ export default function Home() {
 
 			<ChatEngine
 				height="100vh"
-				projectID="3b75d3be-6c4c-463a-beb5-0eb00e1d65cb"
+				projectID="0bd800ff-2c75-4203-9a04-e10e824efdd4"
 				userName={ localStorage.getItem("username") }
 				userSecret={ localStorage.getItem("secret") }
 				renderNewMessageForm={ () => <MessageFormSocial /> }
